@@ -1,0 +1,30 @@
+/* Roligare touch för Sites by Romi */
+.rot{display:inline-block;color:var(--green);font-style:italic;position:relative;transition:opacity .3s,transform .3s}
+.rot.out{opacity:0;transform:translateY(.25em) rotate(-2deg)}
+.logo i{transition:transform .4s cubic-bezier(.3,1.8,.5,1)}
+.logo:hover i{transform:scale(1.8)}.logo i.hop{animation:hop .6s}
+@keyframes hop{40%{transform:translateY(-10px) scale(1.3)}}
+.stage{position:relative}
+.sticker{position:absolute;right:clamp(8px,3vw,36px);top:-22px;background:#f2c94c;color:#1d1d1b;font-size:13px;font-weight:600;padding:10px 16px;border-radius:99px;transform:rotate(6deg);box-shadow:0 8px 20px -8px rgba(0,0,0,.4);animation:wob 3s ease-in-out infinite;z-index:2}
+@keyframes wob{50%{transform:rotate(-4deg) scale(1.06)}}
+.browser{transition:transform .25s ease-out;will-change:transform}
+.marquee{overflow:hidden;background:var(--ink);color:#f4f1ea;padding:16px 0;transform:rotate(-1.2deg);margin:10px -2vw;white-space:nowrap}
+.marquee div{display:inline-block;animation:slide 28s linear infinite;font-size:18px;font-weight:500}
+.marquee span{margin:0 22px}.marquee b{color:#f2c94c;font-weight:400}
+@keyframes slide{to{transform:translateX(-50%)}}
+.svc{transition:background .25s,transform .25s}
+.svc:hover{background:var(--card);transform:translateY(-4px)}
+.svc h3 .em{display:inline-block;margin-right:8px;transition:transform .3s}
+.svc:hover .em{transform:rotate(20deg) scale(1.3)}
+.pcard{transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.pcard:nth-child(odd):hover{transform:translateY(-8px) rotate(-1.5deg)}
+.pcard:nth-child(even):hover{transform:translateY(-8px) rotate(1.5deg)}
+.plan{transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.plan:not(.pop):hover{transform:translateY(-8px) rotate(-.8deg)}
+.btn{transition:transform .2s cubic-bezier(.3,1.8,.5,1),background .2s,color .2s}
+.btn:hover{transform:scale(1.06) rotate(-1deg)}.btn:active{transform:scale(.96)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.cf{position:fixed;top:-12px;width:10px;height:14px;z-index:99;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(720deg);opacity:.8}}
+@media(prefers-reduced-motion:reduce){.marquee div,.sticker{animation:none}.rv{opacity:1;transform:none}}
